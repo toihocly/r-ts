@@ -1,0 +1,91 @@
+{
+  "name": "vestiums-admin",
+  "version": "0.1.4",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "4.11.3",
+    "@material-ui/icons": "4.11.2",
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "12.6.3",
+    "@types/jest": "26.0.20",
+    "@types/node": "14.14.25",
+    "@types/react": "17.0.1",
+    "@types/react-dom": "17.0.0",
+    "@types/react-router-dom": "5.1.7",
+    "@typescript-eslint/eslint-plugin": "4.15.0",
+    "@typescript-eslint/parser": "4.15.0",
+    "axios": "0.21.1",
+    "chroma-js": "2.1.0",
+    "connected-react-router": "6.8.0",
+    "eslint": "7.19.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jest": "24.1.3",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "fontsource-roboto": "4.0.0",
+    "lodash": "4.17.20",
+    "material-ui-dropzone": "3.5.0",
+    "memoize-one": "5.1.1",
+    "query-string": "6.13.8",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-id-generator": "3.0.1",
+    "react-redux": "7.2.2",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.2",
+    "redux": "4.0.5",
+    "redux-persist": "6.0.0",
+    "redux-saga": "1.1.3",
+    "reselect": "4.0.0",
+    "typescript": "4.1.4",
+    "web-vitals": "1.1.0"
+  },
+  "scripts": {
+    "version": "node ./scripts/version.js && git add version.json",
+    "postversion": "git push origin && git push --tags",
+    "remove-local-tags": "git tag | xargs git tag -d && git pull --tags",
+    "remove-remote-tags": "echo [USAGE] yarn run remove-remote-tags \"v0.1.[0-2]\" && git tag | grep $1 | xargs -n 1 -I% git push origin :refs/tags/% && yarn run remove-local-tags",
+    "reset": "rm -fr $TMPDIR/react-* && rm -rf $TMPDIR/haste-* && rm -rf $TMPDIR/metro-* && watchman watch-del-all && rm -rf node_modules && yarn install",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/axios": "0.14.0",
+    "@types/chroma-js": "2.1.3",
+    "@types/lodash": "4.14.168",
+    "@types/memoize-one": "5.1.2",
+    "@types/query-string": "6.3.0",
+    "@types/react-redux": "7.1.16",
+    "@types/redux": "3.6.0",
+    "@types/redux-logger": "3.0.8",
+    "@types/redux-persist": "4.3.1",
+    "@types/redux-saga": "0.10.5",
+    "@types/reselect": "2.2.0",
+    "redux-logger": "3.0.6"
+  }
+}
